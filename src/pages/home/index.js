@@ -3,7 +3,7 @@ import { Grid, Typography } from '@material-ui/core';
 
 export default function Example() {
   return (
-    <Grid item xs={12} container spacing={2}>
+    <Grid container spacing={2}>
       <Grid item xs={12} sm={6}>
         <Typography variant="h4">Home 1</Typography>
         <Typography variant="body1">
