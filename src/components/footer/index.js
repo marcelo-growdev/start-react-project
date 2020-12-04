@@ -9,7 +9,21 @@ export default function Footer() {
 
   return (
     <Grid item xs={12} className={classes.root}>
-      <Typography variant="h1">Footer</Typography>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={4}>
+          <Typography variant="h1">Parte 1</Typography>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Typography variant="h1">Parte 2</Typography>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Typography variant="h1">Parte 3</Typography>
+        </Grid>
+
+        <Grid item xs={12}>
+          <Typography variant="h1">Parte 4</Typography>
+        </Grid>
+      </Grid>
     </Grid>
   );
 }
