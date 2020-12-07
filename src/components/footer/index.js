@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <Grid item xs={12} className={classes.root}>
-      <Grid container spacing={2}>
+      <Grid container>
         <Grid item xs={12} sm={4}>
           <Typography variant="h1">Parte 1</Typography>
         </Grid>

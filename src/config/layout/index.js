@@ -11,7 +11,7 @@ export default function Layout({ children }) {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={2} className={classes.root}>
+    <Grid container className={classes.root}>
       <Header />
       <Grid item xs={12} container>
         <Container>{children}</Container>

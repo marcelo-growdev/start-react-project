@@ -26,6 +26,16 @@ export default createMuiTheme(
       fontSize: 12,
     },
     overrides: {
+      MuiCssBaseline: {
+        '@global': {
+          'html, body': {
+            WebkitFontSmoothing: 'auto',
+            padding: 0,
+            margin: 0,
+            backgroundColor: '#fff',
+          },
+        },
+      },
       MuiTableCell: {
         head: {
           backgroundColor: '#F57F45',
