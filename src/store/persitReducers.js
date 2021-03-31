@@ -4,7 +4,7 @@ import { persistReducer } from 'redux-persist';
 export default (reducers) => {
   const persistedReducer = persistReducer(
     {
-      key: 'rj-growdev',
+      key: 'start-react-project',
       storage,
       whitelist: ['user'],
     },

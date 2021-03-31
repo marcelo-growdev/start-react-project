@@ -5,7 +5,9 @@ export default function Example() {
   return (
     <Grid container>
       <Grid item xs={12} sm={6}>
-        <Typography variant="h4">Home 1</Typography>
+        <Typography variant="h4" color="primary-light">
+          Home 1
+        </Typography>
         <Typography variant="body1">
           What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
           and typesetting industry. Lorem Ipsum has been the industrys standard

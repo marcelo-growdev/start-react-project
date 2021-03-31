@@ -1,12 +1,12 @@
-const defaultState = null;
+const initialState = null;
 
-export default function user(state = defaultState, action) {
-  switch (action.type) {
-    case '@user/LOGIN':
-      return action.data;
+export default function user(state = initialState, { type, payload }) {
+  switch (type) {
+    case 'user/LOGIN':
+      return payload;
 
-    case '@user/LOGOUT':
-      return defaultState;
+    case 'user/LOGOUT':
+      return initialState;
 
     default:
       return state;

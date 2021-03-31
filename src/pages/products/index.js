@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
-import { useStyles } from './useStyles';
+import { useStyles } from './styles';
 
 export default function Products() {
   const classes = useStyles();

@@ -1,10 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-import Layout from '../config/layout';
+import DefaultLayout from '../config/layout/default';
+import LoginLayout from '../config/layout/login';
 
-export default function RouteWrapper({ component: Component, ...rest }) {
+export default function RouteWrapper({
+  component: Component,
+  isPrivate,
+  ...rest
+}) {
+  const user = useSelector((state) => state.user);
+  let signed = false;
+  console.log(user);
+  if (user) {
+    signed = true;
+  }
+
+  if (!signed && isPrivate) {
+    return <Redirect to="/login" />;
+  }
+
+  if (signed && !isPrivate) {
+    return <Redirect to="/" />;
+  }
+
+  const Layout = signed ? DefaultLayout : LoginLayout;
   return (
     <Route
       {...rest}
@@ -16,8 +37,3 @@ export default function RouteWrapper({ component: Component, ...rest }) {
     />
   );
 }
-
-RouteWrapper.propTypes = {
-  component: PropTypes.oneOfType([PropTypes.element, PropTypes.func])
-    .isRequired,
-};

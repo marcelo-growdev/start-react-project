@@ -1,13 +1,12 @@
-export function login(data) {
+export function login(payload) {
   return {
-    type: '@user/LOGIN',
-    data,
+    type: 'user/LOGIN',
+    payload,
   };
 }
 
-export function logout(data) {
+export function logout() {
   return {
-    type: '@user/LOGOUT',
-    data,
+    type: 'user/LOGOUT',
   };
 }
