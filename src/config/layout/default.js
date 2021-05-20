@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Header from '../../components/header';
@@ -20,7 +19,3 @@ export default function Layout({ children }) {
     </Grid>
   );
 }
-
-Layout.propTypes = {
-  children: PropTypes.element.isRequired,
-};
